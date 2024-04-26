@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<extension key="com.octopus8.tecidchecker" type="module">
+  <file>tecidchecker</file> 
+  <name>TDR Contribution External ID Validation</name>
+  <description>TECID Checker, or Taxable External Contact ID Checker, introduces a new validation rule that will check if a contribution (that is taxable) contact has an external ID.</description>
+  <license>AGPL-3.0</license>
+  <maintainer>
+    <author>Melissa</author>
+    <email>melissa@octopus8.com</email>
+  </maintainer>
+  <releaseDate>2023-12-12</releaseDate>
+  <version>1.0</version>
+  <develStage>alpha</develStage>
+  <compatibility>
+    <ver>5.66</ver>
+  </compatibility>
+  <comments>This extension introduces a new validation rule that will check if a contact has an external ID upon creating a Tax-deductible contribution</comments>
+  <classloader>
+    <psr0 prefix="CRM_" path="."/>
+    <psr4 prefix="Civi\" path="Civi"/>
+  </classloader>
+  <civix>
+    <namespace>CRM/Tecidchecker</namespace>
+    <format>23.02.1</format>
+    <angularModule>crmTecidchecker</angularModule>
+  </civix>
+  <mixins>
+    <mixin>mgd-php@1.0.0</mixin>
+    <mixin>setting-php@1.0.0</mixin>
+    <mixin>smarty-v2@1.0.1</mixin>
+  </mixins>
+  <requires>
+	<ext>civi_contribute</ext>
+  </requires>
+</extension>
